@@ -25,3 +25,4 @@ Na początek z frontu najważniejsze jest żeby wyglad był później będziemy 
 zapytaniami do backendu \
 
 Ku**a cos jeszcze z pullami. \
+jebać
