@@ -1,41 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 .profile {
-    margin: 5%;
+    margin: 3%;
     font-size: 50px;
     display: grid;
     grid-template-columns: auto auto auto;
 }
-.profile > div {
+.wnuczek{
     background-color: #777;
     padding: 5%;
-    margin: 2.5%;
     text-align: center;
+    height: 400px;
+    width: 300px;
 }
+
+.wnuczek:hover{
+    box-shadow: 10px 10px 10px #00000049;
+    height: 410px;
+    width: 310px;
+}
+.profile > div > #zdjecie {
+    height: 50%;
+    border-style: dashed;
+    font-size: 10px;
+}
+
 .profile > div > #imie {
-    font-size: 60px;
+    font-size: 40px;
     margin: 1px;
 }
 .profile > div > #opis {
     font-size: 15px;
-    margin: 1px; 
 }
-.profile > div > #zdjecie {
-    height: 30%;
-    border-style: dashed;
-    font-size: 10px;
-}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    height: 300vh;
+    position: relative;
 }
+
 h1 {
-    padding: 0%;
     font-size: 275%;
-    margin: 0%;
 }
 h2 {
-    padding: 0%;
     font-size: 100%;
 }
 header {
@@ -43,6 +53,7 @@ header {
     color: white;
     padding: 15px;
     text-align: center;
+    top: 0;
 }
 nav {
     display:flex;
@@ -66,8 +77,6 @@ nav a:hover {
 .container {
     display: flex;
     justify-content: right;
-    margin: 0%;
-    padding: 0%;
     font-size: 65%;
 }
 .btn {
