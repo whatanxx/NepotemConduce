@@ -1,164 +1,54 @@
 <!DOCTYPE html>
 <html lang = "pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            NepotemConduce
+        </title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <button class="btn" onclick="window.location.href='#login'">Login</button>
+                <button class="btn" onclick="window.location.href='#register'">Register</button>
+            </div>
 
-    <title>
-        Nepotem Conduce
-    </title>
+            <div>
+                <h1 id = "pierwszy">Nepotem Conduce</h1>
+                <h2>Usługa wynajęcia opiekunów osoby starszej</h2>
+            </div>
+        </header>
 
+        <nav>
+            <a href="">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <style>
-        .profile {
-            margin: 5%;
-            font-size: 50px;
-            display: grid;
-            grid-template-columns: auto auto auto;
-        }
-        .profile > div {
-            background-color: #777;
-            padding: 5%;
-            margin: 2.5%;
-            text-align: center;
-        }
-        .profile > div > #imie {
-            font-size: 60px;
-            margin: 1px;
-        }
-        .profile > div > #opis {
-            font-size: 15px;
-            margin: 1px; 
-        }
-        .profile > div > #zdjecie {
-            height: 30%;
-            border-style: dashed;
-            font-size: 10px;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            padding: 0%;
-            font-size: 275%;
-            margin: 0%;
-        }
-        h2 {
-            padding: 0%;
-            font-size: 100%;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            display:flex;
-            background-color: #444;
-            overflow: hidden;
-            justify-content: center;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            justify-content: center;
-            margin: 10px;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .container {
-            display: flex;
-            justify-content: right;
-            margin: 0%;
-            padding: 0%;
-            font-size: 65%;
-        }
-        .btn {
-            background-color: #444;
-            color: white;
-            padding: 5px 30px;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-        }
-        .btn:hover {
-            background-color: #ddd;
-            color: black;
-        }
-    </style>
-
-
-</head>
-
-<body>
-<header>
-    <div class="container">
-        <button class="btn" onclick="window.location.href='#login'">Login</button>
-        <button class="btn" onclick="window.location.href='#register'">Register</button>
-    </div>
-</header>
-
-
-
-<header>
-<h1 id = "pierwszy">Nepotem Conduce</h1>
-<h2>Usługa wynajęcia opiekunów osoby starszej</h2>
-</header>
-
-<nav>
-<a href="">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
-
-
-
-
-
-
-
-</body>
-
-<body>
-
-<div class = "profile">
-    <div>
-            <p id = imie> osoba 1</p>
-            <p id = opis> jakiś krótki opis osoby1</p>
-            <p id = zdjecie> 'tu mozna dac np img'</p>
-    </div>
-    <div>      
-            <p id = imie> osoba 2</p>
-            <p id = opis> jakiś krótki opis osoby2</p>
-            <p id = zdjecie></p>
-    </div>
-    <div>
-            <p id = imie> osoba 3</p>
-            <p id = opis> jakiś krótki opis osoby3</p>
-            <p id = zdjecie></p>
-    </div>
-    <div>
-            <p id = imie> osoba 4</p>
-            <p id = opis> jakiś krótki opis osoby4</p>
-            <p id = zdjecie></p>
-    </div>
-</div>
-
-
-</body>
-
-
-
-
-
+        <div class = "profile">
+            <div>
+                    <p id = imie> osoba 1</p>
+                    <p id = opis> jakiś krótki opis osoby1</p>
+                    <p id = zdjecie> 'tu mozna dac np img'</p>
+            </div>
+            <div>      
+                    <p id = imie> osoba 2</p>
+                    <p id = opis> jakiś krótki opis osoby2</p>
+                    <p id = zdjecie></p>
+            </div>
+            <div>
+                    <p id = imie> osoba 3</p>
+                    <p id = opis> jakiś krótki opis osoby3</p>
+                    <p id = zdjecie></p>
+            </div>
+            <div>
+                    <p id = imie> osoba 4</p>
+                    <p id = opis> jakiś krótki opis osoby4</p>
+                    <p id = zdjecie></p>
+            </div>
+        </div>
+    </body>
 </html>
