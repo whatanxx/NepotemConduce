@@ -16,7 +16,7 @@ Wtyczka live server w VisualStudioCode \
 # Jak pracujemy na github 
 Front robi na branchu frontend \
 git checkout frontend \
-
+Trzbea zrobic branche
 Backend analogicznie \
 
 Na koniec bedziemy to mergowac z mainem \
