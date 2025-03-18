@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/frontend/styles/header.css" />
+    <link rel="stylesheet" href="/frontend/styles/register.css" />
+    <title>Zarejestruj się</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <h1 id="pierwszy">Nepotem Conduce</h1>
+        <h2>Usługa wynajęcia opiekunów osoby starszej</h2>
+      </div>
+      <div id="nav-register-login">
+        <a href="">Zaloguj</a>
+        <a href="">Zarejestruj się</a>
+      </div>
+    </header>
+
+    <nav>
+      <a href="">Strone główna</a>
+      <a href="#about">O nas</a>
+      <a href="#services">Usługi</a>
+      <a href="#contact">Kontact</a>
+    </nav>
+
+    <div class="container">
+      <form action="" id="form-senior">
+        <h3>Utwórz konto dla osoby starszej</h3>
+
+        <div>
+          <div class="form-group">
+            <div>
+              <label for="form-senior-firstName">Imię</label>
+              <input
+                name="form-senior-firstName"
+                id="form-senior-firstName"
+                type="text"
+              />
+            </div>
+            <div>
+              <label for="form-senior-lastName">Nazwisko</label>
+              <input
+                name="form-senior-lastName"
+                id="form-senior-lastName"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="form-input">
+            <label for="form-senior-email">Email</label>
+            <input
+              type="email"
+              name="form-senior-email"
+              id="form-senior-email"
+            />
+          </div>
+          <div class="form-group">
+            <div>
+              <label for="form-senior-password">Hasło</label>
+              <input
+                type="password"
+                name="form-senior-password"
+                id="form-senior-password"
+              />
+            </div>
+
+            <div>
+              <label for="form-senior-repassword">Potwierdź hasło</label>
+              <input
+                type="password"
+                name="form-senior-repassword"
+                id="form-senior-repassword"
+              />
+            </div>
+          </div>
+          <div>
+            <label>Płeć</label>
+          </div>
+
+          <div class="form-group">
+            <div class="form-group">
+              <div>
+                <label for="form-senior-gender-male">Mężczyzna</label>
+                <input
+                  type="radio"
+                  name="form-senior-gender"
+                  id="form-senior-gender-male"
+                  value="male"
+                />
+              </div>
+              <div>
+                <label for="form-senior-gender-male">Kobieta</label>
+                <input
+                  type="radio"
+                  name="form-senior-gender"
+                  id="form-senior-gender-female"
+                  value="female"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="form-senior-age">Wiek</label>
+              <input name="form-senior-age" type="text" id="form-senior-age" />
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="form-group">
+          <div>
+            <label for="form-senior-care">Stopien samodzielności</label>
+            <select name="form-senior-care" id="form-senior-care">
+              <option value="">Ciągła opieka</option>
+              <option value="">Niski</option>
+              <option value="">Średni</option>
+              <option value="">Dobry</option>
+            </select>
+          </div>
+
+          <!-- Potrzeby seniora też pobierane z bazy danych?? -->
+          <div>
+            <label for="form-senior-needs">Potrzeby seniora</label>
+
+            <div class="form-group">
+              <div>
+                <label for="form-senior-meds">Podawnie leków</label>
+                <input
+                  type="checkbox"
+                  name="form-senior-meds"
+                  id="form-senior-meds"
+                />
+              </div>
+              <div>
+                <label for="form-senior-cooking">Gotowanie</label>
+                <input
+                  type="checkbox"
+                  name="form-senior-cooking"
+                  id="form-senior-cooking"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Miasta obsługiwane pobierane z baz danych -->
+        <div class="form-select">
+          <label for="form-senior-city">Miasto</label>
+          <select name="" id="">
+            <option value="">Warszawa</option>
+            <option value="">Wrocław</option>
+          </select>
+        </div>
+        <button class="form-btn" type="submit">Zarejestruj się!</button>
+      </form>
+      <form action="" id="form-voluntary" hidden="hidden">
+        <label for="form-voluntary-firstName">Imię</label>
+        <input
+          name="form-senior-firstName"
+          id="form-voluntary-firstName"
+          type="text"
+        />
+
+        <label for="form-voluntary-lastName">Nazwisko</label>
+        <input
+          name="form-voluntary-lastName"
+          id="form-voluntary-lastName"
+          type="text"
+        />
+
+        <label for="form-voluntary-age">Wiek</label>
+        <input name="form-voluntary-age" type="text" id="form-voluntary-age" />
+
+        <label for="form-voluntary-care">Stopien samodzielności</label>
+        <select name="form-voluntary-care" id="form-voluntary-care">
+          <option value="">Ciągła opieka</option>
+          <option value="">Niski</option>
+          <option value="">Średni</option>
+          <option value="">Dobry</option>
+        </select>
+
+        <!-- Potrzeby seniora też pobierane z bazy danych?? -->
+        <label for="form-voluntary-needs">Potrzeby seniora</label>
+
+        <div class="form-group">
+          <div>
+            <label for="form-voluntary-meds">Podawnie leków</label>
+            <input
+              type="checkbox"
+              name="form-voluntary-meds"
+              id="form-voluntary-meds"
+            />
+          </div>
+          <div>
+            <label for="form-senior-cooking">Gotowanie</label>
+            <input
+              type="checkbox"
+              name="form-voluntary-cooking"
+              id="form-voluntary-cooking"
+            />
+          </div>
+        </div>
+        <label for="">Numer kontaktowy</label>
+        <input type="tel" name="" id="" />
+
+        <!-- Miasta obsługiwane pobierane z baz danych -->
+        <label for="form-voluntary-city">Miasto</label>
+        <select name="" id="">
+          <option value="">Warszawa</option>
+          <option value="">Wrocław</option>
+        </select>
+
+        <button class="form-btn" type="submit">Zarejestruj się!</button>
+      </form>
+      <div id="register-btns">
+        <button id="voluntary-btn">Wolontariusz</button>
+        <button id="senior-btn">Szukam opiekuna</button>
+      </div>
+    </div>
+
+    <script src="/frontend/scripts/register.js"></script>
+  </body>
+</html>
