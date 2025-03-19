@@ -28,11 +28,17 @@ h1 {
   margin: 5px;
   padding: 7px;
   font-weight: bold;
+  text-shadow: 2px 2px 2px #994052;
 }
 
 #nav-register-login a:hover {
   background-color: #c96464;
   color: black;
+}
+
+#ikona1, #ikona2, #ikona3, #ikona4 {
+margin-right: 7%;
+font-size: 17px;
 }
 
 nav {
