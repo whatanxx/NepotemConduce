@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	background-color: beige;
+}
+
+
+/* nawigacja */
+
+nav {
+	font-size: 2rem;
+	text-transform: uppercase;
+	
+}
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1050;
+}
+
+.orange-color {
+	color: rgb(255, 102, 0);
+}
+
+.navbar-toggler {
+	font-size: 4rem;
+}
+
+.navbar-brand {
+	font-size: 2.8rem;
+	font-weight: bold;
+	text-transform: none;
+}
