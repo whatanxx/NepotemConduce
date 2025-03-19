@@ -4,8 +4,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(90deg,#c75269, #c96464,#c9526a);
-  color: white;
+  background-color: #c96464;
   padding: 16px;
 }
 
@@ -31,9 +30,14 @@ h1 {
   font-weight: bold;
 }
 
+#nav-register-login a:hover {
+  background-color: #c96464;
+  color: black;
+}
+
 nav {
   display: flex;
-  background-color: #c96464;
+  background-color:rgb(68, 68, 68);
   box-shadow: 2px 4px 8px 4px #35151580;
   margin-bottom: 48px;
 }
@@ -42,11 +46,14 @@ nav a {
   padding: 14px 20px;
   text-align: center;
   text-decoration: none;
-  color: #421b23;
-  background: linear-gradient(90deg,#994052, #c96464) ;
+  color: #ffffff;
+  background-color: rgb(68, 68, 68) ;
   font-weight: bold;
   width: 200px;
   text-align: center;
+  border-left: solid;
+  border-left-color: rgb(29, 29, 29);
+  border-left-width: 3px;
 
   /* border-color: #421b23;
   border-style: solid;
@@ -54,6 +61,6 @@ nav a {
   /* #994052, #c96464 */
 }
 nav a:hover {
-  background-color: rgb(201, 98, 118)   ;
+  background-color: rgb(115,115,115)   ;
   color: black;
 }
