@@ -4,7 +4,6 @@
 }
 
 body {
-  
   background: linear-gradient(#afa17e, 50%, #c39b4f);
   font-family: "Poppins", sans-serif;
 }
@@ -13,11 +12,15 @@ body {
   width: 500px;
 }
 
-h3{
-    margin-bottom: 24px;
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+h3 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
 }
 
 form {
@@ -28,7 +31,6 @@ form {
   box-shadow: 2px 4px 8px 4px rgba(0, 0, 0, 0.5);
 }
 
-
 form input,
 form select,
 button {
@@ -37,20 +39,24 @@ button {
 
 form input,
 form select {
-    display: block;
+  display: block;
   padding: 10px 5px;
   border-radius: 4px;
   margin-bottom: 16px;
 }
 
 form select {
-  padding: 10px 22px;
+  /* padding: 10px 22px; */
+  font-family: "Poppins", sans-serif;
+  width: 100%;
 }
-
+form input{
+  width: 100%;
+}
 form label {
-    font-weight: bold;
-    color: white;
-    text-shadow: 0px 1px 1px black;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 1px 1px black;
 }
 
 .form-group {
@@ -58,22 +64,20 @@ form label {
   gap: 24px;
   justify-content: space-between;
   align-items: flex-end;
-  
 }
 
 .form-input {
-    width: 100%;
-    /* margin-right: auto; */
+  /* width: 452px; */
+  /* margin-right: auto; */
 }
 
-.form-input input{
-   
-    width: 80%;
-    margin-right: 0;
-}
+/* .form-input input {
+  width: 80%;
+  margin-right: 0;
+} */
 
 .form-btn {
-    display: block;
+  display: block;
   margin-top: 16px;
   margin-left: auto;
   margin-right: auto;
@@ -93,20 +97,19 @@ form option {
 }
 
 #register-btns button {
-  margin: 70% 0;
   background: radial-gradient(circle at center, #cb5d5d, rgb(182, 71, 93));
-  width: 150px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   border-radius: 5%;
   color: white;
   text-wrap: wrap;
   font-size: 24px;
   /* padding: 90px 90px; */
-  margin: 0;
+  margin: 24px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #register-btns button:hover {
-  background-color: pink;
+  background: pink;
   cursor: pointer;
 }

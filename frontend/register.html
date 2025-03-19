@@ -45,6 +45,7 @@
                 name="form-senior-firstName"
                 id="form-senior-firstName"
                 type="text"
+                required
               />
             </div>
             <div>
@@ -53,17 +54,31 @@
                 name="form-senior-lastName"
                 id="form-senior-lastName"
                 type="text"
+                required
               />
             </div>
           </div>
-          <div class="form-input">
-            <label for="form-senior-email">Email</label>
-            <input
-              type="email"
-              name="form-senior-email"
-              id="form-senior-email"
-            />
+          <div class="form-group">
+            <!-- wiek telefon -->
+            <div>
+              <label for="form-senior-age">Wiek</label>
+              <input
+                name="form-senior-age"
+                type="text"
+                id="form-senior-age"
+                required
+              />
+            </div>
+            <div>
+              <label for="form-senior-phone">Numer kontaktowy</label>
+              <input
+                type="text"
+                name="form-senior-phone"
+                id="form-senior-phone"
+              />
+            </div>
           </div>
+
           <div class="form-group">
             <div>
               <label for="form-senior-password">Hasło</label>
@@ -71,6 +86,7 @@
                 type="password"
                 name="form-senior-password"
                 id="form-senior-password"
+                required
               />
             </div>
 
@@ -80,53 +96,62 @@
                 type="password"
                 name="form-senior-repassword"
                 id="form-senior-repassword"
+                required
               />
             </div>
           </div>
           <div>
-            <label>Płeć</label>
+            <label for="form-senior-email">Email</label>
+            <input
+              class="form-input"
+              type="email"
+              name="form-senior-email"
+              id="form-senior-email"
+              required
+            />
           </div>
+    
+          
+        
 
           <div class="form-group">
-            <div class="form-group">
-              <div>
-                <label for="form-senior-gender-male">Mężczyzna</label>
-                <input
-                  type="radio"
-                  name="form-senior-gender"
-                  id="form-senior-gender-male"
-                  value="male"
-                />
-              </div>
-              <div>
-                <label for="form-senior-gender-male">Kobieta</label>
-                <input
-                  type="radio"
-                  name="form-senior-gender"
-                  id="form-senior-gender-female"
-                  value="female"
-                />
+            <div>
+              <label for="form-senior-gender">Płeć</label>
+              <div class="form-group">
+                <div>
+                  <label for="form-senior-gender-male">Mężczyzna</label>
+                  <input
+                    type="radio"
+                    name="form-senior-gender"
+                    id="form-senior-gender-male"
+                    value="male"
+                  />
+                </div>
+                <div>
+                  <label for="form-senior-gender-female">Kobieta</label>
+                  <input
+                    type="radio"
+                    name="form-senior-gender"
+                    id="form-senior-gender-female"
+                    value="female"
+                  />
+                </div>
               </div>
             </div>
             <div>
-              <label for="form-senior-age">Wiek</label>
-              <input name="form-senior-age" type="text" id="form-senior-age" />
+              <label for="form-senior-care">Stopien samodzielności</label>
+              <select name="form-senior-care" id="form-senior-care" required>
+                <option value="" disabled selected>Stopień samodzielności</option>
+                <option value="">Ciągła opieka</option>
+                <option value="">Niski</option>
+                <option value="">Średni</option>
+                <option value="">Dobry</option>
+              </select>
             </div>
           </div>
-          
         </div>
 
         <div class="form-group">
-          <div>
-            <label for="form-senior-care">Stopien samodzielności</label>
-            <select name="form-senior-care" id="form-senior-care">
-              <option value="">Ciągła opieka</option>
-              <option value="">Niski</option>
-              <option value="">Średni</option>
-              <option value="">Dobry</option>
-            </select>
-          </div>
-
           <!-- Potrzeby seniora też pobierane z bazy danych?? -->
           <div>
             <label for="form-senior-needs">Potrzeby seniora</label>
@@ -154,41 +179,127 @@
         <!-- Miasta obsługiwane pobierane z baz danych -->
         <div class="form-select">
           <label for="form-senior-city">Miasto</label>
-          <select name="" id="">
-            <option value="">Warszawa</option>
-            <option value="">Wrocław</option>
+          <select name="form-senior-city" id="form-senior-city" required>
+            <option value="" disabled selected>Wybierz miasto</option>
+            <option value="warszawa">Warszawa</option>
+            <option value="wroclaw">Wrocław</option>
           </select>
         </div>
         <button class="form-btn" type="submit">Zarejestruj się!</button>
       </form>
-      <form action="" id="form-voluntary" hidden="hidden">
-        <label for="form-voluntary-firstName">Imię</label>
-        <input
-          name="form-senior-firstName"
-          id="form-voluntary-firstName"
-          type="text"
-        />
+      <!--  -->
+      <!-- Formularz wolontariusz -->
+      <!--  -->
+      <form action="" method="POST" id="form-voluntary">
+        <h3>Zarejestruj się jako wolontariusz</h3>
+        <div class="form-group">
+          <div>
+            <label for="form-voluntary-firstName">Imię</label>
+            <input
+              name="form-senior-firstName"
+              id="form-voluntary-firstName"
+              type="text"
+              required
+            />
+          </div>
+          <div>
+            <label for="form-voluntary-lastName">Nazwisko</label>
+            <input
+              name="form-voluntary-lastName"
+              id="form-voluntary-lastName"
+              type="text"
+              required
+            />
+          </div>
+        </div>
 
-        <label for="form-voluntary-lastName">Nazwisko</label>
-        <input
-          name="form-voluntary-lastName"
-          id="form-voluntary-lastName"
-          type="text"
-        />
+        <div class="form-group">
+          <div>
+            <label for="form-voluntary-age">Wiek</label>
+            <input
+              name="form-voluntary-age"
+              type="text"
+              id="form-voluntary-age"
+              required
+            />
+          </div>
+          <div>
+            <label for="">Numer kontaktowy</label>
+            <input type="tel" name="" id="" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="form-voluntary-password">Hasło</label>
+            <input
+              type="password"
+              name="form-voluntary-password"
+              id="form-voluntary-password"
+              required
+            />
+          </div>
 
-        <label for="form-voluntary-age">Wiek</label>
-        <input name="form-voluntary-age" type="text" id="form-voluntary-age" />
-
-        <label for="form-voluntary-care">Stopien samodzielności</label>
-        <select name="form-voluntary-care" id="form-voluntary-care">
-          <option value="">Ciągła opieka</option>
-          <option value="">Niski</option>
-          <option value="">Średni</option>
-          <option value="">Dobry</option>
-        </select>
-
-        <!-- Potrzeby seniora też pobierane z bazy danych?? -->
-        <label for="form-voluntary-needs">Potrzeby seniora</label>
+          <div>
+            <label for="form-voluntaryr-repassword">Potwierdź hasło</label>
+            <input
+              type="password"
+              name="form-voluntary-repassword"
+              id="form-voluntary-repassword"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input
+            class="form-input"
+            type="email"
+            name="form-voluntary-email"
+            id="form-voluntary-email"
+          />
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="form-voluntary-gender">Płeć</label>
+            <div class="form-group">
+              <div>
+                <label for="form-voluntary-gender-male">Mężczyzna</label>
+                <input
+                  type="radio"
+                  name="form-voluntary-gender"
+                  id="form-voluntary-gender-male"
+                  value="male"
+                />
+              </div>
+              <div>
+                <label for="form-voluntary-gender-female">Kobieta</label>
+                <input
+                  type="radio"
+                  name="form-voluntary-gender"
+                  id="form-voluntary-gender-female"
+                  value="female"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="form-voluntary-care">Doświadczenie</label>
+            <select
+              name="form-voluntary-care"
+              id="form-voluntary-care"
+              required
+            >
+              <option value="" disabled selected>Doświadczenie</option>
+              <option value="none">Brak</option>
+              <option value="small">1-2 lata</option>
+              <option value="medium">3-5 lat</option>
+              <option value="big">6+ lat</option>
+            </select>
+          </div>
+        </div>
+        <label for="form-voluntary-needs"
+          >Obowiązki, które jesteś skłonny wykonywać</label
+        >
 
         <div class="form-group">
           <div>
@@ -207,15 +318,22 @@
               id="form-voluntary-cooking"
             />
           </div>
+          <div>
+            <label for="form-senior-cooking">Robienie zakupów</label>
+            <input
+              type="checkbox"
+              name="form-voluntary-cooking"
+              id="form-voluntary-cooking"
+            />
+          </div>
         </div>
-        <label for="">Numer kontaktowy</label>
-        <input type="tel" name="" id="" />
 
         <!-- Miasta obsługiwane pobierane z baz danych -->
         <label for="form-voluntary-city">Miasto</label>
-        <select name="" id="">
-          <option value="">Warszawa</option>
-          <option value="">Wrocław</option>
+        <select name="form-voluntary-city" id="form-voluntary-city" required>
+          <option value="" disabled selected> Wybierz miasto</option>
+          <option value="warszawa">Warszawa</option>
+          <option value="wroclaw">Wrocław</option>
         </select>
 
         <button class="form-btn" type="submit">Zarejestruj się!</button>
