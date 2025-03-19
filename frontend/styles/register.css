@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: #a685e2;
+  
+  background: linear-gradient(#afa17e, 50%, #c39b4f);
   font-family: "Poppins", sans-serif;
 }
 .container {
@@ -21,10 +22,10 @@ h3{
 
 form {
   margin: 16px 0;
-  background-color: #6fa3ef;
-  padding: 24px 12px;
+  background-color: #cb5d5d;
+  padding: 24px 24px;
   border-radius: 2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 8px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -93,10 +94,10 @@ form option {
 
 #register-btns button {
   margin: 70% 0;
-  background-color: #f4a261;
+  background: radial-gradient(circle at center, #cb5d5d, rgb(182, 71, 93));
   width: 150px;
   height: 100px;
-  border-radius: 10%;
+  border-radius: 5%;
   color: white;
   text-wrap: wrap;
   font-size: 24px;
