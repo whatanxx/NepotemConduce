@@ -1,38 +1,59 @@
+*{
+  text-decoration: none;
+}
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #333;
+  background: linear-gradient(90deg,#c75269, #c96464,#c9526a);
   color: white;
   padding: 16px;
 }
 
 h1 {
     font-size: 48px;
+    color: #421b23;
+    text-shadow: 4px 4px 4px #994052;
   }
   h2 {
     font-size: 20px;
-    font-weight: normal;
+    font-weight: bold;
+    color: #421b23;
+    text-shadow: 2px 2px 2px #994052;
   }
 
-#nav-register-login {
+#nav-register-login a {
   flex-shrink: 0;
+  color: #421b23;
+  border-style: solid;
+  background: linear-gradient(#994052, #c96464);
+  margin: 5px;
+  padding: 7px;
+  font-weight: bold;
 }
 
 nav {
   display: flex;
-  background-color: #444;
-
+  background-color: #c96464;
+  box-shadow: 2px 4px 8px 4px #35151580;
   margin-bottom: 48px;
 }
 nav a {
   color: white;
   padding: 14px 20px;
-
   text-align: center;
-  margin-right: 10px;
   text-decoration: none;
+  color: #421b23;
+  background: linear-gradient(90deg,#994052, #c96464) ;
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+
+  /* border-color: #421b23;
+  border-style: solid;
+  #c96464,#994052 */
+  /* #994052, #c96464 */
 }
 nav a:hover {
-  background-color: #ddd;
+  background-color: rgb(201, 98, 118)   ;
   color: black;
 }
