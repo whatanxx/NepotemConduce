@@ -1,0 +1,23 @@
+
+form{
+    height: 150px;
+    width: 300px;
+}
+.container a{
+    color: black;
+    float: left;
+    font-size: 14px;
+}
+.container form button{
+    display: block;
+    flex-shrink: 0;
+    color: #421b23;
+    border-style: solid;
+    background: linear-gradient(#994052, #c96464);
+    margin: 5px;
+    padding: 7px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #994052;
+    float: left;
+    margin-right: 200px;
+}   
