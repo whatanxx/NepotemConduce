@@ -12,36 +12,11 @@ html {
 body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.6rem;
-	background-color: beige;
+	background: linear-gradient(#f5f5dc, 50%, #a8a8a8);
 }
 
 
 /* nawigacja */
-
-nav {
-	font-size: 2rem;
-	text-transform: uppercase;
-	
-}
-.navbar {
-	position: sticky;
-	top: 0;
-	z-index: 1050;
-}
-
-.orange-color {
-	color: rgb(255, 102, 0);
-}
-
-.navbar-toggler {
-	font-size: 4rem;
-}
-
-.navbar-brand {
-	font-size: 2.8rem;
-	font-weight: bold;
-	text-transform: none;
-}
 
 
 
@@ -80,7 +55,7 @@ nav {
 
 /* sekcja about us*/
 
-.aboutus-box h3 {
+.aboutus-box h4 {
 	font-size: 2.5rem;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -119,3 +94,5 @@ nav {
 .team .card-title {
 	font-size: 2rem;
 }
+
+
