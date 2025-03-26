@@ -1,38 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/frontend/styles/header.css" />
-    <link rel="stylesheet" href="/frontend/styles/register.css" />
-    <title>Zarejestruj się</title>
-  </head>
-
-  <body>
-    <header>
-      <div id="logo">
-        <h1 id="pierwszy">Nepotem Conduce</h1>
-        <h2>Usługa wynajęcia opiekunów osoby starszej</h2>
-      </div>
-      <div id="nav-register-login">
-        <a href="">Zaloguj</a>
-        <a href="">Zarejestruj się</a>
-      </div>
-    </header>
-
-    <nav>
-      <a href="">Strone główna</a>
-      <a href="#about">O nas</a>
-      <a href="#services">Usługi</a>
-      <a href="#contact">Kontact</a>
-    </nav>
-
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Zarejestruj się{% endblock title %}
+{% block styles %}
+  <link rel="stylesheet" href="{% static "board/styles/register.css"%}">
+{% endblock styles %}
+{% block content %}
     <div class="container">
       <form action="" id="form-senior" hidden>
         <h3>Utwórz konto dla osoby starszej</h3>
@@ -190,7 +162,7 @@
       <!--  -->
       <!-- Formularz wolontariusz -->
       <!--  -->
-      <form action="" method="POST" id="form-voluntary">
+      <form action="" method="POST" id="form-voluntary" hidden>
         <h3>Zarejestruj się jako wolontariusz</h3>
         <div class="form-group">
           <div>
@@ -344,6 +316,5 @@
       </div>
     </div>
 
-    <script src="/frontend/scripts/register.js"></script>
-  </body>
-</html>
+    <script src="{% static "board/scripts/register.js"%}" defer></script>
+    {% endblock content %}

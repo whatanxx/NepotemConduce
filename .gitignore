@@ -3,3 +3,5 @@ backend/__pycache__/
 backend/nepotemconduce/__pycache__/
 venv/
 .idea/
+.vscode/
+__pycache__/
