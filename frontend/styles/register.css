@@ -128,51 +128,61 @@ font-weight: normal;
 }
 
 .abcd {
-font-size: 20px;
-
+  font-size: 20px;
+  line-height: 1.6; /* Większa przestrzeń między liniami dla lepszej czytelności */
+  color: #333; /* Ciemniejszy kolor tekstu */
+  margin: 0 auto; /* Wyrównanie do środka */
+  padding: 15px 20px; /* Dodanie przestrzeni wokół tekstu */
+  max-width: 900px; /* Ograniczenie szerokości tekstu, by był bardziej czytelny */
+  text-align: justify; /* Wyrównanie tekstu do lewej i prawej strony */
+  text-justify: inter-word; /* Poprawienie wyrównania, aby odstępy były równomierne */
 }
+
 #cbv {
-  align-content: center;
-font-size: 40px;
-color: black;
-text-shadow: 1px 1px 1px;
-text-align: center;
-font-weight: bold;
-margin-right: auto;
-padding-top: 2%;
+  text-align: center;
+  font-size: 40px;
+  color: #000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Delikatny cień tekstu */
+  font-weight: bold;
+  margin: 0 auto 20px; /* Wyrównanie do środka i odstęp od innych elementów */
+  padding-top: 2%;
 }
 
 #abcd {
-  align-content: center;
   font-size: 18px;
-  color: black;
-  text-align: center;
-  justify-content: center;
-  margin-left: auto;
-  vertical-align: middle;
-  padding-top: 2%;
-  margin-left: 3%;
-  margin-right: 3%;
+  color: #333;
+  text-align: justify; /* Wyrównanie tekstu do obu stron */
+  margin: 20px auto; /* Równomierny margines wokół tekstu */
+  padding: 10px 20px; /* Przestrzeń wokół tekstu */
+  line-height: 1.6; /* Większa przestrzeń między liniami */
+  max-width: 800px; /* Ograniczenie szerokości */
 }
 
 #cba {
-font-size: 18px;
-font-weight: bold;
-color: black;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
   margin-left: auto;
-
+  margin-right: auto;
 }
 
-#about-us {
 
-text-align: center ;
-font-size: 18px;
-color: black;
-margin-right: 3%;
-margin-left: 3%;
+#about-us {
+  text-align: center;
+  font-size: 18px;
+  color: #333; /* Zmiana na ciemniejszy odcień czerni dla lepszej czytelności */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* Dodanie przestrzeni wokół tekstu */
+  max-width: 900px; /* Ograniczenie szerokości tekstu, aby był bardziej czytelny */
+  line-height: 1.6; /* Większa przestrzeń między liniami tekstu */
+  margin-top: 20px; /* Dodanie odstępu od góry */
+  margin-bottom: 20px; /* Dodanie odstępu od dołu */
 }
 
 #h6 {
-
   font-size: 30px;
+  font-weight: bold; /* Pogrubienie nagłówka */
+  color: #000; /* Utrzymanie ciemnej kolorystyki */
+  margin-bottom: 15px; /* Dodanie marginesu dolnego */
 }
