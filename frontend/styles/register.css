@@ -186,3 +186,6 @@ font-weight: normal;
   color: #000; /* Utrzymanie ciemnej kolorystyki */
   margin-bottom: 15px; /* Dodanie marginesu dolnego */
 }
+#WyrownanieInd {
+  padding-left: 40px
+}
