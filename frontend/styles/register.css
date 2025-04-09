@@ -151,6 +151,8 @@ padding-top: 2%;
   margin-left: auto;
   vertical-align: middle;
   padding-top: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 #cba {
@@ -166,6 +168,8 @@ color: black;
 text-align: center ;
 font-size: 18px;
 color: black;
+margin-right: 3%;
+margin-left: 3%;
 }
 
 #h6 {

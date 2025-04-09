@@ -27,7 +27,7 @@ body {
 .hero-text p {
     margin-bottom: 24px;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(44, 44, 44);
     text-shadow: 1px 1px 1px black;
     font-size: 25px;
 	font-weight: bold;
@@ -45,11 +45,11 @@ body {
 
 .home .welcome-text {
 	font-size: 2.9rem;
-	color: rgb(0, 0, 0);
+	color: rgb(44, 44, 44);
 }
 
 .home .btn {
-	color: rgb(0, 0, 0);
+	color: rgb(44, 44, 44);
 	padding: 1em 2em;
 	font-size: 3rem;
 	text-transform: uppercase;
@@ -85,7 +85,7 @@ body {
 
 .accordion-button:not(.collapsed) {
 	background-color: #ff5733; /* Zmienia kolor tła po rozwinięciu */
-	color: white; /* Zmienia kolor tekstu */
+	color: rgb(44, 44, 44); /* Zmienia kolor tekstu */
 }
 
 /* team */
