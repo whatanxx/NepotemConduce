@@ -27,7 +27,7 @@ body {
 .hero-text p {
     margin-bottom: 24px;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     text-shadow: 1px 1px 1px black;
     font-size: 25px;
 	font-weight: bold;
@@ -45,15 +45,15 @@ body {
 
 .home .welcome-text {
 	font-size: 2.9rem;
-	color: rgb(255, 255, 254);
+	color: rgb(0, 0, 0);
 }
 
 .home .btn {
-	color: rgb(255, 255, 254);
+	color: rgb(0, 0, 0);
 	padding: 1em 2em;
 	font-size: 3rem;
 	text-transform: uppercase;
-	text-shadow: 2px 2px 3px rgb(172, 21, 21);
+	text-shadow: 2px 2px 3px rgb(255, 255, 255);
 	border-width: 5px;
 }
 
