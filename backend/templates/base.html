@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{% static "index.css" %}" />
+  
     <link rel="stylesheet" href="{% static "header.css" %}" />
     {% block styles %}{% endblock styles %}
   </head>
@@ -22,14 +22,14 @@
           <h2>Usługa wynajęcia opiekunów osoby starszej</h2>
         </div>
         <div id="nav-register-login">
-          <a href="">Zaloguj</a>
-          <a href="">Zarejestruj się</a>
+          <a href="{% url "login-page" %}">Zaloguj</a>
+          <a href="{% url "register-page" %}">Zarejestruj się</a>
         </div>
       </header>
   
       <nav>
-        <a href="">Strone główna</a>
-        <a href="#about">O nas</a>
+        <a href="{% url "main-page" %}">Strone główna</a>
+        <a href="{% url "card-page" %}">O nas</a>
         <a href="#services">Usługi</a>
         <a href="#contact">Kontact</a>
       </nav>

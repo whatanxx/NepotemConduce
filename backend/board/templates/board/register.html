@@ -5,311 +5,146 @@
   <link rel="stylesheet" href="{% static "board/styles/register.css"%}">
 {% endblock styles %}
 {% block content %}
+
+
     <div class="container">
-      <form action="" id="form-senior" hidden>
+      
+      <form method="post" action="{% url 'register-page' %}" id="form-senior" hidden>
+        {% csrf_token %}
         <h3>Utwórz konto dla osoby starszej</h3>
-
-        <div>
-          <div class="form-group">
-            <div>
-              <label for="form-senior-firstName">Imię</label>
-              <input
-                name="form-senior-firstName"
-                id="form-senior-firstName"
-                type="text"
-                required
-              />
-            </div>
-            <div>
-              <label for="form-senior-lastName">Nazwisko</label>
-              <input
-                name="form-senior-lastName"
-                id="form-senior-lastName"
-                type="text"
-                required
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <!-- wiek telefon -->
-            <div>
-              <label for="form-senior-age">Wiek</label>
-              <input
-                name="form-senior-age"
-                type="text"
-                id="form-senior-age"
-                required
-              />
-            </div>
-            <div>
-              <label for="form-senior-phone">Numer kontaktowy</label>
-              <input
-                type="text"
-                name="form-senior-phone"
-                id="form-senior-phone"
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div>
-              <label for="form-senior-password">Hasło</label>
-              <input
-                type="password"
-                name="form-senior-password"
-                id="form-senior-password"
-                required
-              />
-            </div>
-
-            <div>
-              <label for="form-senior-repassword">Potwierdź hasło</label>
-              <input
-                type="password"
-                name="form-senior-repassword"
-                id="form-senior-repassword"
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <label for="form-senior-email">Email</label>
-            <input
-              class="form-input"
-              type="email"
-              name="form-senior-email"
-              id="form-senior-email"
-              required
-            />
-          </div>
-    
-          
-        
-
-          <div class="form-group">
-            <div>
-              <label for="form-senior-gender">Płeć</label>
-              <div class="form-group">
-                <div>
-                  <label for="form-senior-gender-male">Mężczyzna</label>
-                  <input
-                    type="radio"
-                    name="form-senior-gender"
-                    id="form-senior-gender-male"
-                    value="male"
-                  />
-                </div>
-                <div>
-                  <label for="form-senior-gender-female">Kobieta</label>
-                  <input
-                    type="radio"
-                    name="form-senior-gender"
-                    id="form-senior-gender-female"
-                    value="female"
-                  />
-                </div>
-              </div>
-            </div>
-            <div>
-              <label for="form-senior-care">Stopien samodzielności</label>
-              <select name="form-senior-care" id="form-senior-care" required>
-                <option value="" disabled selected>Stopień samodzielności</option>
-                <option value="">Ciągła opieka</option>
-                <option value="">Niski</option>
-                <option value="">Średni</option>
-                <option value="">Dobry</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
         <div class="form-group">
-          <!-- Potrzeby seniora też pobierane z bazy danych?? -->
           <div>
-            <label for="form-senior-needs">Potrzeby seniora</label>
-
-            <div class="form-group">
-              <div>
-                <label for="form-senior-meds">Podawnie leków</label>
-                <input
-                  type="checkbox"
-                  name="form-senior-meds"
-                  id="form-senior-meds"
-                />
-              </div>
-              <div>
-                <label for="form-senior-cooking">Gotowanie</label>
-                <input
-                  type="checkbox"
-                  name="form-senior-cooking"
-                  id="form-senior-cooking"
-                />
-              </div>
-            </div>
+              {{ user_form.first_name.label_tag }}
+              {{ user_form.first_name }}
           </div>
+          <div>
+              {{ user_form.last_name.label_tag }}
+              {{ user_form.last_name }}
+          </div>
+      </div>
+  
+      <div>
+          {{ user_form.email.label_tag }}
+          {{ user_form.email }}
+      </div>
+  
+      <div class="form-group">
+          <div>
+              {{ user_form.password.label_tag }}
+              {{ user_form.password }}
+          </div>
+          <div>
+              {{ user_form.confirm_password.label_tag }}
+              {{ user_form.confirm_password }}
+          </div>
+      </div>
+      <div class="form-group">
+        <div>
+            {{ senior_form.age.label_tag }}
+            {{ senior_form.age }}
         </div>
-        <!-- Miasta obsługiwane pobierane z baz danych -->
-        <div class="form-select">
-          <label for="form-senior-city">Miasto</label>
-          <select name="form-senior-city" id="form-senior-city" required>
-            <option value="" disabled selected>Wybierz miasto</option>
-            <option value="warszawa">Warszawa</option>
-            <option value="wroclaw">Wrocław</option>
-          </select>
+        <div>
+            {{ senior_form.phone_number.label_tag }}
+            {{ senior_form.phone_number }}
         </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            {{ senior_form.gender.label_tag }}
+            {{ senior_form.gender }}
+        </div>
+        <div>
+            {{ senior_form.independence.label_tag }}
+            {{ senior_form.independence }}
+        </div>
+    </div>
+
+    <div>
+        {{ senior_form.duties.label_tag }}
+        {{ senior_form.duties }}
+    </div>
+
+    <div>
+        {{ senior_form.city.label_tag }}
+        {{ senior_form.city }}
+    </div>
+        <!-- Identyfikuje ktory formularz zostal przeslany  -->
+        <input type="hidden" name="form_type" value="senior_form">
         <button class="form-btn" type="submit">Zarejestruj się!</button>
       </form>
       <!--  -->
       <!-- Formularz wolontariusz -->
       <!--  -->
-      <form action="" method="POST" id="form-voluntary" hidden>
+      <p>{{ formVolunteer.errors }}</p>
+      <form method="post" action="{% url 'register-page' %}" id="form-voluntary" hidden>
+        {% csrf_token %}
+        
         <h3>Zarejestruj się jako wolontariusz</h3>
+    
         <div class="form-group">
-          <div>
-            <label for="form-voluntary-firstName">Imię</label>
-            <input
-              name="form-senior-firstName"
-              id="form-voluntary-firstName"
-              type="text"
-              required
-            />
-          </div>
-          <div>
-            <label for="form-voluntary-lastName">Nazwisko</label>
-            <input
-              name="form-voluntary-lastName"
-              id="form-voluntary-lastName"
-              type="text"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div>
-            <label for="form-voluntary-age">Wiek</label>
-            <input
-              name="form-voluntary-age"
-              type="text"
-              id="form-voluntary-age"
-              required
-            />
-          </div>
-          <div>
-            <label for="">Numer kontaktowy</label>
-            <input type="tel" name="" id="" />
-          </div>
-        </div>
-        <div class="form-group">
-          <div>
-            <label for="form-voluntary-password">Hasło</label>
-            <input
-              type="password"
-              name="form-voluntary-password"
-              id="form-voluntary-password"
-              required
-            />
-          </div>
-
-          <div>
-            <label for="form-voluntaryr-repassword">Potwierdź hasło</label>
-            <input
-              type="password"
-              name="form-voluntary-repassword"
-              id="form-voluntary-repassword"
-              required
-            />
-          </div>
-        </div>
-        <div>
-          <label for="">Email</label>
-          <input
-            class="form-input"
-            type="email"
-            name="form-voluntary-email"
-            id="form-voluntary-email"
-          />
-        </div>
-        <div class="form-group">
-          <div>
-            <label for="form-voluntary-gender">Płeć</label>
-            <div class="form-group">
-              <div>
-                <label for="form-voluntary-gender-male">Mężczyzna</label>
-                <input
-                  type="radio"
-                  name="form-voluntary-gender"
-                  id="form-voluntary-gender-male"
-                  value="male"
-                />
-              </div>
-              <div>
-                <label for="form-voluntary-gender-female">Kobieta</label>
-                <input
-                  type="radio"
-                  name="form-voluntary-gender"
-                  id="form-voluntary-gender-female"
-                  value="female"
-                />
-              </div>
+            <div>
+                {{ user_form.first_name.label_tag }}
+                {{ user_form.first_name }}
             </div>
-          </div>
-          <div>
-            <label for="form-voluntary-care">Doświadczenie</label>
-            <select
-              name="form-voluntary-care"
-              id="form-voluntary-care"
-              required
-            >
-              <option value="" disabled selected>Doświadczenie</option>
-              <option value="none">Brak</option>
-              <option value="small">1-2 lata</option>
-              <option value="medium">3-5 lat</option>
-              <option value="big">6+ lat</option>
-            </select>
-          </div>
+            <div>
+                {{ user_form.last_name.label_tag }}
+                {{ user_form.last_name }}
+            </div>
         </div>
-        <label for="form-voluntary-needs"
-          >Obowiązki, które jesteś skłonny wykonywać</label
-        >
-
+    
+        <div>
+            {{ user_form.email.label_tag }}
+            {{ user_form.email }}
+        </div>
+    
         <div class="form-group">
-          <div>
-            <label for="form-voluntary-meds">Podawnie leków</label>
-            <input
-              type="checkbox"
-              name="form-voluntary-meds"
-              id="form-voluntary-meds"
-            />
-          </div>
-          <div>
-            <label for="form-senior-cooking">Gotowanie</label>
-            <input
-              type="checkbox"
-              name="form-voluntary-cooking"
-              id="form-voluntary-cooking"
-            />
-          </div>
-          <div>
-            <label for="form-senior-cooking">Robienie zakupów</label>
-            <input
-              type="checkbox"
-              name="form-voluntary-cooking"
-              id="form-voluntary-cooking"
-            />
-          </div>
+            <div>
+                {{ user_form.password.label_tag }}
+                {{ user_form.password }}
+            </div>
+            <div>
+                {{ user_form.confirm_password.label_tag }}
+                {{ user_form.confirm_password }}
+            </div>
         </div>
-
-        <!-- Miasta obsługiwane pobierane z baz danych -->
-        <label for="form-voluntary-city">Miasto</label>
-        <select name="form-voluntary-city" id="form-voluntary-city" required>
-          <option value="" disabled selected> Wybierz miasto</option>
-          <option value="warszawa">Warszawa</option>
-          <option value="wroclaw">Wrocław</option>
-        </select>
-
+    
+        <div class="form-group">
+            <div>
+                {{ volunteer_form.age.label_tag }}
+                {{ volunteer_form.age }}
+            </div>
+            <div>
+                {{ volunteer_form.phone_number.label_tag }}
+                {{ volunteer_form.phone_number }}
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <div>
+                {{ volunteer_form.gender.label_tag }}
+                {{ volunteer_form.gender }}
+            </div>
+            <div>
+                {{ volunteer_form.experience.label_tag }}
+                {{ volunteer_form.experience }}
+            </div>
+        </div>
+    
+        <div>
+            {{ volunteer_form.duties.label_tag }}
+            {{ volunteer_form.duties }}
+        </div>
+    
+        <div>
+            {{ volunteer_form.city.label_tag }}
+            {{ volunteer_form.city }}
+        </div>
+        <!-- Identyfikuje ktory formularz zostal przeslany  -->
+        <input type="hidden" name="form_type" value="volunteer_form">
         <button class="form-btn" type="submit">Zarejestruj się!</button>
-      </form>
+    </form>
+    
       <div id="register-btns">
         <button id="voluntary-btn">Wolontariusz</button>
         <button id="senior-btn">Szukam opiekuna</button>

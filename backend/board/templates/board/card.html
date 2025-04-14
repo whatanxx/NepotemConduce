@@ -1,0 +1,15 @@
+{% load static %}
+
+
+<div class="profiles-container">
+{% for volunteer in object_list %}
+<div class="profile-card">
+    <img src="{% static "board/img/profilepic.jpg" %}" alt="">
+    <p>
+        {{volunteer.user.first_name}} {{volunteer.user.last_name}}
+    </p>
+    <p>Miasto: {{volunteer.city}}</p>
+</div>
+{% endfor %}
+</div>
+
