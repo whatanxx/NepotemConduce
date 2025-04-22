@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Zaloguj się{% endblock title %}
+{% block styles %}
+  <link rel="stylesheet" href="{% static "board/styles/register.css" %}" />
+{% endblock styles %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}    
+        <button class="form-btn" type="submit">Zaloguj się</button>
+    </form>    
+</div>
+
+{% endblock content %}

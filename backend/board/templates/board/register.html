@@ -2,14 +2,14 @@
 {% load static %}
 {% block title %}Zarejestruj się{% endblock title %}
 {% block styles %}
-  <link rel="stylesheet" href="{% static "board/styles/register.css"%}">
+  <link rel="stylesheet" href="{% static "board/styles/register.css" %}" />
 {% endblock styles %}
 {% block content %}
 
 
     <div class="container">
       
-      <form method="post" action="{% url 'register-page' %}" id="form-senior" hidden>
+      <form method="post" action="{% url 'register-page' %}" id="form-senior">
         {% csrf_token %}
         <h3>Utwórz konto dla osoby starszej</h3>
         <div class="form-group">
@@ -77,7 +77,7 @@
       <!-- Formularz wolontariusz -->
       <!--  -->
       <p>{{ formVolunteer.errors }}</p>
-      <form method="post" action="{% url 'register-page' %}" id="form-voluntary" hidden>
+      <form method="post" action="{% url 'register-page' %}" id="form-voluntary">
         {% csrf_token %}
         
         <h3>Zarejestruj się jako wolontariusz</h3>

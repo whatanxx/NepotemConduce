@@ -6,7 +6,136 @@
 {% endblock styles %}
 {% block title %} Strona główna {%endblock%}
 {% block content %} 
+  {% if user.is_authenticated %}
   <h1>Nasi wolontariusze!</h1>
+  {% endif %}
   {% include "board/card.html" %}
+  <section id="aboutus">
+    <div class="container py-5 aboutus-boxes">
+      <div class="row text-center">
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="aboutus-box m-3 p-4 p-lg-5 border text-dark bg-light">
+          <h3>jakość</h3>
+          <i class="bi bi-graph-up aboutus-icon"></i>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="aboutus-box m-3 p-4 p-lg-5 border text-light bg-dark">
+          <h3>Klienci</h3>
+          <i class="bi bi-people-fill aboutus-icon"></i>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="aboutus-box m-3 p-4 p-lg-5 border text-dark bg-light">
+          <h3>Zaufanie</h3>
+          <i class="bi bi-emoji-sunglasses-fill aboutus-icon"></i>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="aboutus-box m-3 p-4 p-lg-5 border text-light bg-dark">
+          <h3>Doświadczenie</h3>
+          <i class="bi bi-hand-thumbs-up aboutus-icon"></i>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, voluptatem</p>
+        </div>
+      </div>
+
+
+
+      </div>
+    </div>
+    <div class="div container py-5">
+      <p class="display-3 text-uppercase orange-color text-center mb-4">Czym różnimy się od konkurencji?</p>
+
+      <div class="accordion py-5" id="accordionExample">
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Bezpieczeństwo
+            </button>
+          </h4>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, veritatis.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Wysoka jakość świadczonych usług
+            </button>
+          </h4>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, unde.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+           Tylko autoryzowani wolontariusze
+            </button>
+          </h4>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, atque!
+            </div>
+          </div>
+        </div>
+         </div>
+      </div>
+  </section>
+
+  <section id="team" class="team py-5">
+    <div class="container py-5 text-center">
+      <p class="display-3 text-uppercase orange-color mb-0">Zespół</p>
+      <p class="py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, eveniet natus voluptatum accusamus, ipsum praesentium assumenda minus laudantium voluptates atque hic officia eos nulla voluptate!</p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static "board/img/PREZES.jpeg" %}" class="card-img-top" alt="prezes firmy Nepotum Conduce ">
+            <div class="card-body">
+           <h5 class="card-title">Prezes</h5>
+           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static "board/img/HR.jpeg"%}" class="card-img-top" alt="Dział zasobów ludzkich">
+            <div class="card-body">
+           <h5 class="card-title">HR</h5>
+           <p class="card-text">This is a short card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static "board/img/MARKETING.jpeg"%}" class="card-img-top" alt="Dział marketingu">
+            <div class="card-body">
+           <h5 class="card-title">Marketing</h5>
+           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="{% static "board/img/AUTORYZACJA.jpeg"%}" class="card-img-top" alt="Dział autoryzacji wolontariuszy">
+            <div class="card-body">
+           <h5 class="card-title">Autoryzacja</h5>
+           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+         </div>
+
+    </div>
+  </section>
 
 {% endblock %}

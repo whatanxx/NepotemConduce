@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+      {% block styles %}
+      <link rel="stylesheet" href="{% static "board/styles/register.css" %}" />
+      <link rel="stylesheet" href="{% static "board/styles/radek.css" %}" />
+      {% endblock styles %}
+      {% block title %} O nas{% endblock title %} O nas
+
+
+
+  
+   {% block content %}
+
+    <section id="about-us">
+      <h5 id = 'cbv'>O Nas - Nepotem Conduce</h5>
+      <p>W Nepotem Conduce stawiamy na profesjonalizm, empatię i indywidualne podejście do każdej osoby, którą się opiekujemy. Nasza firma specjalizuje się w wynajmie opiekunów osób starszych, oferując kompleksową pomoc w codziennym życiu seniorów. Wierzymy, że każdy zasługuje na godną i pełną szacunku opiekę, dlatego dokładamy wszelkich starań, aby zapewnić bezpieczeństwo, komfort i wsparcie w każdej sytuacji.</p>
+
+      <h6 id = 'cbv'>Nasza misja</h6>
+      <p>Nasza misja to tworzenie bezpiecznego i przyjaznego środowiska dla osób starszych, w którym czują się one szanowane i otoczone troskliwą opieką. Nasz zespół składa się z wykwalifikowanych i doświadczonych opiekunów, którzy nie tylko posiadają wiedzę medyczną, ale także są wrażliwi na potrzeby emocjonalne seniorów.</p>
+
+      <p>Każdy z naszych opiekunów przechodzi dokładny proces rekrutacji, obejmujący szkolenia oraz weryfikację doświadczenia. Dzięki temu mamy pewność, że każda osoba, która trafia pod naszą opiekę, otrzyma wsparcie na najwyższym poziomie.</p>
+
+      <h6 id = 'cbv'>Dlaczego my?</h6>
+      <ul>
+          <li><strong>Doświadczenie i profesjonalizm</strong> – Znamy potrzeby osób starszych i wiemy, jak ważna jest odpowiednia pomoc w codziennym życiu.</li>
+          <li id="WyrownanieInd"><strong>Indywidualne podejście</strong> – Każdy klient i jego potrzeby są dla nas priorytetem. Dostosowujemy naszą ofertę do konkretnej sytuacji.</li>
+          <li><strong>Empatia i zaufanie</strong> – Naszym celem jest budowanie relacji opartych na szacunku, trosce i wzajemnym zaufaniu.</li>
+      </ul>
+
+      <p>Jesteśmy tu, aby pomóc w zapewnieniu lepszej jakości życia seniorów oraz wsparcia ich rodzin. Zaufaj Nepotem Conduce i przekonaj się, jak opieka może zmienić życie na lepsze.</p>
+  </section>
+  {% endblock content %}

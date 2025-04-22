@@ -2,6 +2,7 @@
 
 
 <div class="profiles-container">
+    {% if user.is_authenticated %}
 {% for volunteer in object_list %}
 <div class="profile-card">
     <img src="{% static "board/img/profilepic.jpg" %}" alt="">
@@ -11,5 +12,6 @@
     <p>Miasto: {{volunteer.city}}</p>
 </div>
 {% endfor %}
+{% endif %}
 </div>
 

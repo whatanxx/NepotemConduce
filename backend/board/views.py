@@ -90,25 +90,34 @@ class RegisterView(View):
         return render(request, 'board/register.html')
 
 
-def login(req):
-    return render(req, "board/login.html")
+# def login(req):
+#     return render(req, "board/login.html")
 
-class LoginView(FormView):
-    form_class = UserLoginForm
-    template_name = "board/login2.html"
-    success_url = "/index"
-    def post(self, req):
-        def form_invalid(self, form):
-            response = super().form_invalid(form)
-            return response
-        def form_valid(self, form):
-            print(User.check_password(req.POST["password"]))
-            return HttpResponseRedirect("main-page")
+# class LoginView(FormView):
+#     form_class = UserLoginForm
+#     template_name = "board/login2.html"
+#     success_url = "/index"
+#     def post(self, req):
+#         def form_invalid(self, form):
+#             response = super().form_invalid(form)
+#             return response
+#         def form_valid(self, form):
+#             print(User.check_password(req.POST["password"]))
+#             return HttpResponseRedirect("main-page")
         
-def login2(req):
-    return render(req, "board/login2.html")
+# def login2(req):
+#     return render(req, "board/login2.html")
 
 def card(req):
     return render(req, "board/card.html", {
         "seniors": Senior.objects.all()
     })
+
+class AboutUsView(TemplateView):
+    template_name = "board/about.html"
+
+class ServicesView(TemplateView):
+    template_name = "board/services.html"
+
+class ContactView(TemplateView):
+    template_name = "board/contact.html"

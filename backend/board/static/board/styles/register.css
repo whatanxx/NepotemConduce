@@ -3,10 +3,7 @@
   padding: 0;
 }
 
-body {
-  background: linear-gradient(#afa17e, 50%, #c39b4f);
-  font-family: "Poppins", sans-serif;
-}
+
 .container {
   margin: 0 auto;
   width: 500px;

@@ -9,7 +9,7 @@ let voluntaryBtnClicked = false;
 let registerBtnEl = document.getElementById("register-btns");
 
 seniorBtn.addEventListener("click", ()=>{
-    voluntaryForm.style.display="";
+    voluntaryForm.style.display="none";
     seniorBtnClicked = !seniorBtnClicked;
     voluntaryBtnClicked = false;
     console.log(seniorBtnClicked);
@@ -21,14 +21,14 @@ seniorBtn.addEventListener("click", ()=>{
         seniorForm.scrollIntoView();
     }
     else{
-        seniorForm.style.display="";
+        seniorForm.style.display="none";
         
     }
 } )
 
 voluntaryBtn.addEventListener("click", ()=>{
     voluntaryBtnClicked = !voluntaryBtnClicked;
-    seniorForm.style.display="";
+    seniorForm.style.display="none";
     seniorBtnClicked = false;
     console.log(voluntaryBtnClicked);
     if(voluntaryBtnClicked == true){
@@ -38,7 +38,7 @@ voluntaryBtn.addEventListener("click", ()=>{
         voluntaryForm.scrollIntoView();
     }
     else{
-        voluntaryForm.style.display="";
+        voluntaryForm.style.display="none";
         
     }
 })
