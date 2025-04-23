@@ -93,17 +93,17 @@ class RegisterView(View):
 # def login(req):
 #     return render(req, "board/login.html")
 
-# class LoginView(FormView):
-#     form_class = UserLoginForm
-#     template_name = "board/login2.html"
-#     success_url = "/index"
-#     def post(self, req):
-#         def form_invalid(self, form):
-#             response = super().form_invalid(form)
-#             return response
-#         def form_valid(self, form):
-#             print(User.check_password(req.POST["password"]))
-#             return HttpResponseRedirect("main-page")
+class LoginView(FormView):
+    form_class = UserLoginForm
+    template_name = "board/login2.html"
+    success_url = "/index"
+    def post(self, req):
+        def form_invalid(self, form):
+            response = super().form_invalid(form)
+            return response
+        def form_valid(self, form):
+            print(User.check_password(req.POST["password"]))
+            return HttpResponseRedirect("main-page")
         
 # def login2(req):
 #     return render(req, "board/login2.html")

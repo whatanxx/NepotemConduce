@@ -40,6 +40,7 @@
         <button class="form-btn" type="submit">Zarejestruj się!</button>
       </form>
       <form action="" id="form-voluntary" hidden="hidden">
+        {% csrf_token %}
         <label for="form-voluntary-firstName">Imię</label>
         <input
           name="form-senior-firstName"
