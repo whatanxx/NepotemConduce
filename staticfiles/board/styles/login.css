@@ -1,0 +1,17 @@
+form {
+  height: 12rem;
+  width: 300px;
+}
+.container a {
+  color: black;
+  float: left;
+  font-size: 14px;
+}
+
+.container button{
+  display: block;
+  width: 12rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
