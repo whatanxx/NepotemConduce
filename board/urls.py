@@ -9,5 +9,4 @@ urlpatterns = [
     path("contact/", views.ContactView.as_view(), name="contact-page"),
     path("card/", views.card, name="card-page"),
     path("logout/", LogoutView.as_view(next_page="main-page"), name="logout-page"),
-    path("login/", views.LoginView.as_view())
 ]
