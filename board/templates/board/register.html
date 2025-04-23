@@ -9,7 +9,7 @@
 
     <div class="container">
       
-      <form method="post" action="{% url 'register-page' %}" id="form-senior">
+      <form method="post" action="{% url 'register-page' %}" id="form-senior" style="display:none;">
         {% csrf_token %}
         <h3>Utwórz konto dla osoby starszej</h3>
         <div class="form-group">
@@ -77,7 +77,7 @@
       <!-- Formularz wolontariusz -->
       <!--  -->
       <p>{{ formVolunteer.errors }}</p>
-      <form method="post" action="{% url 'register-page' %}" id="form-voluntary">
+      <form method="post" action="{% url 'register-page' %}" id="form-voluntary" style="display:none;">
         {% csrf_token %}
         
         <h3>Zarejestruj się jako wolontariusz</h3>
