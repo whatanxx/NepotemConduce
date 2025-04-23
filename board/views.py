@@ -95,7 +95,7 @@ class RegisterView(View):
 
 class LoginView(FormView):
     form_class = UserLoginForm
-    template_name = "board/login.html"
+    template_name = "board/login2.html"
     success_url = "/index"
     def post(self, req):
         def form_invalid(self, form):
