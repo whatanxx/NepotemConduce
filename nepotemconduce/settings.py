@@ -133,8 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 
-ALLOWED_HOSTS = [
-    os.environ.get('WEBSITE_HOSTNAME', 'localhost'),
-    'www.nepotemconduce-d4ahhtf3atenh2fr.westeurope-01.azurewebsites.net',
-    'nepotemconduce-d4ahhtf3atenh2fr.westeurope-01.azurewebsites.net'
-]
+ALLOWED_HOSTS = [os.environ.get('WEBSITE_HOSTNAME', 'localhost'),'nepotemconduce-d4ahhtf3atenh2fr.westeurope-01.azurewebsites.net', 'www.nepotemconduce-d4ahhtf3atenh2fr.westeurope-01.azurewebsites.net', 'localhost', '127.0.0.1']
