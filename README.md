@@ -8,7 +8,7 @@ pip install -r requirements.txt \
 
 # Jak uruchomić nasz backend? 
 Musimy być w ścieżce z plikiem manage.py. \
-py manage.py runserver (jesli sie nie poje*****)
+py manage.py runserver (jesli sie nie pomylilem)
 
 # Jak testowac front? 
 Wtyczka live server w VisualStudioCode \
@@ -21,8 +21,7 @@ Backend analogicznie \
 
 Na koniec bedziemy to mergowac z mainem \
 
-Na początek z frontu najważniejsze jest żeby wyglad był później będziemy się j***ć z łączeniem, \
+Na początek z frontu najważniejsze jest żeby wyglad był później będziemy się  z łączeniem, \
 zapytaniami do backendu \
-
-Ku**a cos jeszcze z pullami. \
+ cos jeszcze z pullami. \
 
